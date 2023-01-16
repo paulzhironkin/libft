@@ -1,4 +1,4 @@
-# Ecole 42: Libft project - creating C library
+# Ecole 42: libft
 
 In this project I made library in C containing some recreations of Standart C library functions
 
