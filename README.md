@@ -8,11 +8,32 @@ In this project I made library in C containing some recreations of Standart C li
 
 2) Clone repo and promt "make":
 
+It will compile new library file to use
+
 ```Bash
 make
 ```
 
-It will compile new library file to use
+* for bonus part:
+
+```Bash
+make bonus
+```
+
+* to clean object files:
+```Bash
+make clean
+```
+
+* to clean object files and library:
+```Bash
+make fclean
+```
+
+* to remake library:
+```Bash
+make re
+```
 
 ### List of functions:
 
