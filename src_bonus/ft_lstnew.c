@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: latahbah <latahbah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/09 13:36:39 by latahbah          #+#    #+#             */
-/*   Updated: 2021/10/09 16:59:01 by latahbah         ###   ########.fr       */
+/*   Created: 2021/10/14 12:02:22 by latahbah          #+#    #+#             */
+/*   Updated: 2023/01/16 12:08:01 by latahbah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+#include "libftbonus.h"
+
+t_list	*ft_lstnew(void *content)
 {
-	if (c >= 65 && c <= 90)
-		return (c);
-	else if (c >= 97 && c <= 122)
-		return (c);
-	return (0);
+	t_list	*list;
+
+	list = (t_list *)malloc(sizeof(t_list));
+	if (list == NULL)
+		return (NULL);
+	list->content = content;
+	list->next = NULL;
+	return (list);
 }

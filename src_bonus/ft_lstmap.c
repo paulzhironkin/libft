@@ -1,22 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: latahbah <latahbah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/14 12:40:25 by latahbah          #+#    #+#             */
-/*   Updated: 2021/10/14 12:42:48 by latahbah         ###   ########.fr       */
+/*   Created: 2021/10/14 16:36:16 by latahbah          #+#    #+#             */
+/*   Updated: 2023/01/16 12:07:58 by latahbah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libftbonus.h"
 
-t_list	*ft_lstlast(t_list *lst)
+t_list	*ft_lstmap(t_list *list, void *(*f)(void *), void (*del)(void *))
 {
-	if (lst == NULL)
-		return (NULL);
-	while (lst->next != NULL)
-		lst = lst->next;
-	return (lst);
+	t_list	*new;
+	t_list	*res;
+	t_list	*tmp;
+	void	*cont;
+
+	res = NULL;
+	tmp = list;
+	while (list)
+	{
+		cont = f(list->content);
+		new = ft_lstnew(cont);
+		if (new == NULL && res != NULL)
+			ft_lstclear(&res, free);
+		ft_lstadd_back(&res, new);
+		list = list->next;
+	}
+	ft_lstclear(&list, del);
+	return (res);
 }
