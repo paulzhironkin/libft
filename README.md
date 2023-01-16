@@ -1,7 +1,7 @@
 # Ecole 42: Libft
 In this project I made library in C containing some recreations of Standart C library functions
 
-### How to use:
+### How to build:
 
 1) This repo contains ready library file 'libft.a' whih can be used as stand-alone library
 
