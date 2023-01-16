@@ -5,13 +5,13 @@ In this project I made library in C containing some recreations of Standart C li
 
 1) This repo contains ready library file 'libft.a' whih can be used as stand-alone library
 
-2) Clone repo and promt "make":
-
-It will compile new library file to use
+2) Clone repo and type:
 
 ```Bash
 $ make
 ```
+
+It will compile new library file to use
 
 * for bonus part:
 
