@@ -10,28 +10,28 @@ In this project I made library in C containing some recreations of Standart C li
 It will compile new library file to use
 
 ```Bash
-make
+$ make
 ```
 
 * for bonus part:
 
 ```Bash
-make bonus
+$ make bonus
 ```
 
 * to clean object files:
 ```Bash
-make clean
+$ make clean
 ```
 
 * to clean object files and library:
 ```Bash
-make fclean
+$ make fclean
 ```
 
 * to remake library:
 ```Bash
-make re
+$ make re
 ```
 
 ### List of functions:
