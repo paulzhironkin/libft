@@ -57,5 +57,5 @@ make re
 | `ft_strnstr` | Locates a substring in a string | `ft_tolower` | Converts all upper case chars to lower case |
 | `ft_toupper` | Converts all lower case chars to upper case |
 
-***Bonus part functions workes with linked list***
+***Bonus part functions work with linked list***
 
